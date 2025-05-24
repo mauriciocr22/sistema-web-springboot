@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="navbar">
+        <nav style="padding: 1rem; background-color: #f0f0f0;">
+            <a th:href="@{/}" style="margin-right: 1rem;">Início</a>
+            <a th:href="@{/buscar}" style="margin-right: 1rem;">Buscar Clima</a>
+            <a th:href="@{/historico}">Histórico</a>
+        </nav>
+        <hr/>
+    </div>
+</body>
+</html>
