@@ -7,7 +7,28 @@
 </head>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
-    <h1>Histórico</h1>
-    <p>Aqui ficará o histórico das buscas realizadas pelo usuário.</p>
+    <h1>Histórico de Buscas</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cidade</th>
+                <th>Temperatura (°C)</th>
+                <th>Descrição</th>
+                <th>Data da Consulta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="busca : ${buscas}">
+                <td th:text="${busca.cidade}"></td>
+                <td th:text="${busca.temperatura}"></td>
+                <td th:text="${busca.descricao}"></td>
+                <td>
+                    <span th:if="${busca.dataConsulta != null}" th:text="${#temporals.format(busca.dataConsulta, 'dd/MM/yyyy HH:mm')}"></span>
+                    <span th:if="${busca.dataConsulta == null}">—</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

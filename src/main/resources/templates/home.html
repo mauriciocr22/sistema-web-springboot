@@ -7,7 +7,9 @@
 </head>
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
-    <h1>Bem-vindo à Minha Estação</h1>
-    <p>Use o menu para buscar o clima ou ver o histórico de buscas.</p>
+    <form th:action="@{/buscar}" method="post">
+        <input type="text" name="cidade" placeholder="Digite a cidade" required>
+        <button type="submit">Buscar Clima</button>
+    </form>
 </body>
 </html>
