@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" th:href="@{/assets/css/style_navbar.css}">
 <body>
     <div th:fragment="navbar">
-        <nav style="padding: 1rem; background-color: #f0f0f0;">
-            <a th:href="@{/}" style="margin-right: 1rem;">Início</a>
+        <nav>
+            <a th:href="@{/}">Início</a>
             <a th:href="@{/historico}">Histórico</a>
             <a th:href="@{/logout}">Sair</a>
         </nav>
