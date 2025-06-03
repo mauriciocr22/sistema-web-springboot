@@ -1,0 +1,16 @@
+body{
+    background-image: url(../imgs/bg_nuvens.jpg);
+    background-repeat: no-repeat;       
+    background-size: cover;              
+    background-position: center center;
+    background-attachment: fixed;  
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ded6d6;
+}
+
+h1, h2, p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
