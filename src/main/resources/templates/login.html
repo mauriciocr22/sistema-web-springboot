@@ -6,21 +6,23 @@
     
 </head>
 <body>
-    <form th:action="@{/login}" method="post">
-        <h2>Login</h2>
-        <div>
-            <label for="username">Usuário:</label>
-            <input type="text" name="username" id="username" />
-        </div>
-        <div>
-            <label for="password">Senha:</label>
-            <input type="password" name="password" id="password" />
-        </div>
-        <button type="submit">Entrar</button>
-        
-        <p th:if="${param.error}">Usuário ou senha inválidos</p>
-        <p th:if="${param.logout}">Você saiu com sucesso</p>
-    </form>
+    <div class="box">
+        <form th:action="@{/login}" method="post">
+            <h2>Login</h2>
+            <div>
+                <label for="username">Usuário:</label>
+                <input type="text" name="username" id="username" />
+            </div>
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" />
+            </div>
+            <button type="submit">Entrar</button>
+
+            <p th:if="${param.error}">Usuário ou senha inválidos</p>
+            <p th:if="${param.logout}">Você saiu com sucesso</p>
+        </form>
+    </div>
 
 </body>
 </html>
