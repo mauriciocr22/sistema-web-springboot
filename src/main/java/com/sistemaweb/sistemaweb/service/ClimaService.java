@@ -54,7 +54,7 @@ public class ClimaService {
         return buscaClimaRepository.findAll();
     }
 
-    public void salvar(BuscaClima busca) {
-        buscaClimaRepository.save(busca);
-    }
+    // public void salvar(BuscaClima busca) {
+    //     buscaClimaRepository.save(busca);
+    // }
 }

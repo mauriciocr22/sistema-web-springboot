@@ -41,7 +41,7 @@ public String buscarClima(@RequestParam String cidade, Model model) {
     busca.setTemperatura(clima.getTemperatura());
     busca.setDescricao(clima.getDescricao());
     busca.setDataConsulta(LocalDateTime.now());
-    climaService.salvar(busca);
+    // climaService.salvar(busca);
 
     model.addAttribute("clima", clima);
     return "resultado";

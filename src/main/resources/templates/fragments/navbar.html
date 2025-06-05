@@ -7,7 +7,10 @@
         <nav>
             <a th:href="@{/}">Início</a>
             <a th:href="@{/historico}">Histórico</a>
-            <a th:href="@{/logout}">Sair</a>
+            <form th:action="@{/logout}" method="post" style="display: inline;">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <button type="submit">Sair</button>
+            </form>
         </nav>
         <hr/>
     </div>
